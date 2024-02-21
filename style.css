@@ -50,6 +50,8 @@ nav .logo a {
 }
 
 nav .logo a:hover {
+    border-top-color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
     color: var(--primary-color-dark);
 }
 
@@ -89,13 +91,13 @@ ul li a {
 }
 
 ul li a:hover {
-    border-top-color: var(--secondary-color);
-    border-bottom-color: var(--secondary-color);
-    color: var(--secondary-color);
+    border-top-color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    color: var(--primary-color-dark);
 }
 
 .section {
-    background-color: var(--extra-light);
+    background-color: var(--primary-color-dark);
 }
 
 .section-container {
@@ -114,9 +116,9 @@ ul li a:hover {
     justify-content: center;
 }
 
-.subtitle {
+p#subtitle {
     letter-spacing: 2px;
-    columns: var(--text-light);
+    color: #ffffff;
     font-weight: 600;
     margin-bottom: .5rem;
 }
@@ -125,7 +127,7 @@ ul li a:hover {
     font-size: 2.5rem;
     font-weight: 400;
     line-height: 3rem;
-    color: var(--text-dark);
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
@@ -135,7 +137,7 @@ ul li a:hover {
 
 .description {
     line-height: 1.5rem;
-    color: var(--text-light);
+    color: #ffffff;
     margin-bottom: 2rem;
 }
 
@@ -157,21 +159,25 @@ ul li a:hover {
 }
 
 .hire-me {
-    background-color: var(--primary-color);
-    color: #ffffff;
+    background-color: #ffffff;
+    color: var(--primary-color);
 }
 
 .hire-me:hover {
     background-color: var(--primary-color-dark);
+    color: #ffffff;
+    border: 2px solid #ffffff;
 }
 
 .portfolio {
+    background-color: #ffffff;
     color: var(--primary-color);
 }
 
 .portfolio:hover {
     background-color: var(--primary-color-dark);
     color: #ffffff;
+    border: 2px solid #ffffff;
 }
 
 .image {
@@ -180,8 +186,86 @@ ul li a:hover {
 }
 
 .image img {
-    width: min(25rem, 90%);
+    width: min(20rem, 90%);
     border-radius: 100%;
+}
+
+.about-container {
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    /* display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4rem; */
+}
+
+.image-2 {
+    display: grid;
+    place-items: center;
+}
+
+.image-2 img {
+    margin-top: 100px;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+}
+
+.about {
+    line-height: 1.5rem;
+    color: #ffffff;
+    margin-top: 2rem;
+}
+
+.touch {
+    color: #ffffff;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+#contact-pg {
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4rem;
+}
+
+#contact-form {
+    text-align: center;
+    margin-bottom: 200px;
+    /* margin-top: 15px; */
+}
+
+#contact-form label {
+    color: #ffffff;
+    padding-bottom: 15px;
+    /* padding-top: 15px; */
+}
+
+#contact-form input {
+    margin-top: 5px;
+}
+
+#send-btn {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: .5rem 1rem;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    transition: 0.3px;
+    cursor: pointer;
+}
+
+#send-btn:hover {
+    background-color: var(--primary-color-dark);
+    color: #ffffff;
+    border: 2px solid #ffffff;
 }
 
 @media (width < 750px) {
@@ -199,10 +283,10 @@ ul li a:hover {
         height: calc(100vh - 85px);
         left: -100%;
         top: 85px;
-        background-color: var(--extra-light);
+        background-color: var(--primary-color-dark);
         flex-direction: column;
         justify-content: center;
-        gap: 3rem
+        gap: 3rem;
     }
 
     nav #check:checked ~ ul {
@@ -211,6 +295,7 @@ ul li a:hover {
 
     ul li a {
         font-size: 1.25rem;
+        color: #ffffff;
     }
 
     .section-container {
